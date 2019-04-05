@@ -8,6 +8,14 @@ class Counter extends Component {
 
   // experimental below using arrow function vs constructor()
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevprops", prevState);
+    console.log("prevprops", prevProps);
+    // if (prevProps.counter.value !== this.props.counter.value){
+    //ajax call and get new data from the server
+    // }
+  }
+
   styles = {
     fontSize: 10,
     fontWeight: "bold",
@@ -16,6 +24,7 @@ class Counter extends Component {
   };
 
   render() {
+    console.log("counter rendered");
     return (
       <div>
         {/* <h4>Counter{this.props.id}</h4> */}
